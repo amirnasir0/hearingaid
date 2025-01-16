@@ -8,6 +8,7 @@ import CardComponent from "../Phonak/component/CardComponent";
 import WhyHear from "../Component/WhyHear";
 import AllRate from "../Component/AllRate";
 import CustomerReviews from "../Component/CustomerReviews";
+import FAQs from "../Component/FAQ";
 const Phonak = () => {
   return (
     <>
@@ -19,6 +20,7 @@ const Phonak = () => {
       <WhyHear />
       <AllRate />
       <CustomerReviews />
+      <FAQs/>
       <SpecialCTA />
     </>
   );

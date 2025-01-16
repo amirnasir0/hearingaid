@@ -13,6 +13,7 @@ import FormPage from "./Component/CTA form/formpage";
 import ThankYouForm from "./Component/CTA form/thankyouform";
 import Navbar from "./Component/CTA form/navbar";
 import Phonak from "./Phonak/Phonak";
+import FAQs from "./Component/FAQ";
 const App = () => {
   return (
     <Router>
@@ -30,6 +31,7 @@ const App = () => {
               <WhyHear />
               <AllRate />
               <CustomerReviews />
+              <FAQs/>
               <SpecialCTA />
             </>
           }
