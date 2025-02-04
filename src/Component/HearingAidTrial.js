@@ -3,6 +3,7 @@ import video from "../Assets/video.mp4";
 import DetailsForm from "../Component/TopForm/detailsForm.js";
 import googleLogo from "../Assets/Google.svg";
 import trustpilotLogo from "../Assets/trustpilot.svg";
+import secure from "../Assets/secure.jpg";
 
 const HearingAidTrial = () => {
   return (
@@ -73,10 +74,10 @@ const HearingAidTrial = () => {
             </div>
 
        <div className="flex items-center space-x-4">
-              <img src={trustpilotLogo} alt="Trustpilot Rating" className="h-4" />
+              <img src={secure} alt="Secure Rating" className="h-4" />
               <div>
                 <p className="font-semibold">4.8/5</p>
-                <p className="text-green-500">★★★★★</p>
+                <p className="text-green-500">Secured</p>
               </div>
             </div>
           </div>
