@@ -9,34 +9,23 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "What are the types of hearing aids?",
+      question: "Where can I get Original Signia (Seimens) hearing aids?",
       answer: (
-        <ul className="list-disc ml-6">
-          <li>Behind-the-ear (BTE)</li>
-          <li>In-the-ear (ITE)</li>
-          <li>Completely-in-canal (CIC)</li>
-        </ul>
+        <p>Signia also know as Seimens is a leading hearing aid brand. You can purchase Signia hearing aids from <b>Insono Hearing Clinic</b>. Rated <b>5.0 by 1200 customers</b>, we offer free trial along with home visits for senior citizen hearing clinics. With 13+ years of experience, we are a leading brands for Signia Ear machines.</p>
       ),
     },
     {
-      question: "What is the price of latest hearing aid?",
+      question: "What is the price of latest Signia Digital hearing aids in India?",
       answer: (
         <p>
-          Hearing aids are available in analog and digital form. The price starts from INR 18,500. You may get some great offers.
+         In India, Signia hearing aids are available at different price points based on technology levels. Basic models <b>such as prompt or fun sp</b> start at ₹18,000, while premium models like <b>Signia Styletto or Charge&Go </b>can go up to ₹3,00,000.
         </p>
       ),
     },
     {
-      question: "What Services or warranty do you offer?",
+      question: "Does Signia offer invisible hearing aids?",
       answer: (
-        <ul className="list-disc ml-6">
-          <li>Clean and check services</li>
-          <li>Service and repair</li>
-          <li>Fine-tuning adjustments through software</li>
-          <li>
-            Warranty provided by the brand (ranges from 2 to 4 years) with a dedicated customer service team.
-          </li>
-        </ul>
+        Yes, Signia provides <b>Invisible-in-Canal (IIC)</b> and <b>Completely-in-Canal (CIC) hearing aids</b>, which are discreet and nearly invisible when worn.
       ),
     },
     {
