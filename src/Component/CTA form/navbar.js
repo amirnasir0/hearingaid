@@ -19,9 +19,9 @@ const Navbar = () => {
           </div>
           <button
             className="bg-orange-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-orange-600 transition"
-            onClick={() => (window.location.href = "tel:+919955022067")} // Directing to the phone number
+            onClick={() => (window.location.href = "tel:917742573686")} // Directing to the phone number
           >
-            Contact Us
+          📞 77425-73686
           </button>
         </div>
       </nav>
