@@ -12,7 +12,7 @@ const HearingAidTrial = () => {
         {/* Left Section */}
         <div className="flex-1 w-full md:w-auto">
           <h1 className="text-2xl md:text-4xl font-bold mt-6">
-            This German hearing aid provides the best value for your money
+           Signia Digital Hearing Aids for Clear Hearing
           </h1>
           <ul className="mt-4 space-y-2 text-lg">
             <li className="flex items-center">
@@ -21,15 +21,19 @@ const HearingAidTrial = () => {
             </li>
             <li className="flex items-center">
               <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
-              Outstanding speech clarity
+              Bluetooth connectivity
             </li>
             <li className="flex items-center">
               <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
-              Smartphone connectivity
+              Rechargable Machine
             </li>
             <li className="flex items-center">
               <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
-              Rechargeable battery
+              0% EMI Options
+            </li>
+                 <li className="flex items-center">
+              <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
+              Special offers for Senior Citizen
             </li>
           </ul>
 
