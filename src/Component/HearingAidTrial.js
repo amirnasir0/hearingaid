@@ -4,6 +4,7 @@ import DetailsForm from "../Component/TopForm/detailsForm.js";
 import googleLogo from "../Assets/Google.svg";
 import trustpilotLogo from "../Assets/trustpilot.svg";
 import secure from "../Assets/secure.jpg";
+import SpecialCTA from "./Component/SpecialCTA";
 
 const HearingAidTrial = () => {
   return (
@@ -47,6 +48,7 @@ const HearingAidTrial = () => {
               loop
               className="w-full rounded-lg shadow-lg"
             ></video>
+                <SpecialCTA />
           </div>
         </div>
 
