@@ -7,7 +7,7 @@ import SpecialCTA from "./Component/SpecialCTA";
 import FeaturesSection from "./Component/featuresection";
 import CardComponent from "./Component/CardComponent";
 import WhyHear from "./Component/WhyHear";
-import AllRate from "./Component/AllRate";
+
 import CustomerReviews from "./Component/CustomerReviews";
 import FormPage from "./Component/CTA form/formpage";
 import ThankYouForm from "./Component/CTA form/thankyouform";
@@ -33,7 +33,7 @@ const App = () => {
               <ComparisonTable />
               <CardComponent />
               <WhyHear />
-              <AllRate />
+              
               <CustomerReviews />
               <VideoTestimonials/>
               <FAQs />
