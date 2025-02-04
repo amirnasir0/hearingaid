@@ -68,10 +68,10 @@ const PriceForm = () => {
   return (
     <div className="max-w-lg mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center text-gray-700">
-        Apply for a Free Signia Hearing Aid Trial
+        Hearing Aid Price List 
       </h2>
       <p className="text-center text-gray-500 mb-6">
-       Get a <b>FREE Hearing Test & Home Visit</b> – Limited Offer!
+       Get a Compare Price List of all Hearing Machines
       </p>
       {formVisible && (
         <form onSubmit={handleSubmit} className="space-y-4">
