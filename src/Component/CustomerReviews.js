@@ -9,7 +9,7 @@ const CustomerReviews = () => {
       id: 1,
       stars: 5,
       quote:
-        "I can hear well and quickly reply to others. I’m comfortable in my own community as well as at home. I’m 100% satisfied.",
+        "The audiologist at Insono Hearing visited my home, helped me with <b>Signia Silk IX</b> allowing me to regain my natural hearing levels.",
       name: "Mrs. Gupta",
       role: "",
       image: st1, // Replace with actual image path
@@ -19,8 +19,8 @@ const CustomerReviews = () => {
       stars: 5,
       quote:
         "There’s a big difference now. Khushi responds when we call out to her. I’m extremely happy for my daughter and 100% satisfied.",
-      name: "Baby Khushi",
-      role: "Father: Mr. Honey",
+      name: "Khushi",
+      role: "Father: Mr. Vinay",
       image: st2, // Replace with actual image path
     },
     {
@@ -28,7 +28,7 @@ const CustomerReviews = () => {
       stars: 5,
       quote:
         "These hearing aids have not just transformed my mother's life; they've also deeply influenced our entire family.",
-      name: "Piyush Jain",
+      name: "Piyush Gupta",
       role: "",
       image: st3, // Replace with actual image path
     },
