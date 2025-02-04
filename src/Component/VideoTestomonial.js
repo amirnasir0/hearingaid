@@ -2,7 +2,7 @@ import React from "react";
 
 const VideoTestimonials = () => {
   const videos = [
-    { id: "1", url: "https://www.youtube.com/shorts/oc3g0RElFko" },
+    { id: "1", url: "https://www.youtube.com/embed/b5fGkIiQhR8" },
     { id: "2", url: "https://www.youtube.com/embed/oc3g0RElFko" },
     { id: "3", url: "https://www.youtube.com/embed/ECymrx-xsdk" },
     { id: "4", url: "https://www.youtube.com/embed/Gn3dkFJtCg8" },
