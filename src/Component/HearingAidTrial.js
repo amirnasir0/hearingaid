@@ -77,7 +77,7 @@ const HearingAidTrial = () => {
               <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Secure Rating" className="h-4" />
               <div>
                 <p className="font-semibold">98%</p>
-                <p className="text-green-500">Success Rate</p>
+                <p className="text-black-500">Success Rate</p>
               </div>
             </div>
           </div>
