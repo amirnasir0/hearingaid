@@ -12,7 +12,7 @@ const FAQs = () => {
       question: "Where can I get Signia/Seimens hearing aids?",
       answer: (
         <p>Siemens, also know as Signia is a leading hearing aid brand.
-    You can purchase <b>Signia hearing aids</b> from Insono Hearing Clinic.
+    You can purchase <b>Signia hearing aids</b> from Insono Hearing Clinic.<br />
     Rated <b>5.0 by 1200 customers</b>, we offer free trial along with home visits for senior citizen hearing clinics. With <b>13+ years of experience</b>,
     we are a leading brands for Signia Ear machines.</p>
       ),
@@ -21,50 +21,47 @@ const FAQs = () => {
       question: "What is the price of latest Signia Digital hearing aids in India?",
       answer: (
         <p>
-         In India, Signia hearing aids are available at different price points based on technology levels. Basic models such as Prompt or Fun SP start at ₹18,000, while premium models like <b>Signia Styletto or Charge&Go </b>can go up to ₹3,00,000.
+         In India, Signia hearing aids are available at different price points based on technology levels. <br />
+  Basic models such as <b>Prompt or Fun SP start</b> at ₹18,000, while premium models like <b>Signia Styletto or Charge&Go </b>can go up to ₹3,00,000.
         </p>
       ),
     },
     {
       question: "Does Signia offer invisible hearing aids?",
       answer: (
-        <p>Yes, Signia provides Invisible-in-Canal (IIC)and Completely-in-Canal (CIC) hearing aids, which are discreet and nearly invisible when worn.</p>
+        <p>Yes, Signia provides <b>Invisible-in-Canal (IIC)and Completely-in-Canal (CIC)</b> hearing aids, which are discreet and nearly invisible when worn.</p>
       ),
     },
     {
-      question: "Payment Method & Financing",
+      question: "What is the most discreet ear machine available?",
       answer: (
         <p>
-          We accept almost all payment methods, both physical and digital. EMI facilities are available for select banks and through Bajaj Finance.
+        Signia offers Completely-in-Canal (CIC) and Invisible-in-Canal (IIC) hearing aids, which fit deep inside the ear canal for a nearly invisible appearance.
+         Signia’s <b>Silk X and Insio IIC</b> are among the most discreet hearing aids, designed to be virtually invisible while providing excellent sound quality.<br/>
+        
         </p>
       ),
     },
     {
-      question: "What is the authenticity of your Products?",
+      question: "Tell me about Signia Styletto & Charge&Go?",
       answer: (
-        <ul className="list-disc ml-6">
-          <li>
-            Authorized partners of renowned hearing aid companies: Signia, Phonak, Resound, Widex, Unitron, Starkey, Oticon, etc.
-          </li>
-          <li>
-            Professional and qualified audiologists provide the best-in-class service.
-          </li>
-        </ul>
+       <p><b>Signia Styletto</b> is a slim, stylish, and rechargeable hearing aid featuring Bluetooth connectivity, AI-powered sound enhancement, and a sleek design.<br />
+        Whereas <b>Signia Charge&Go</b> is a rechargeable hearing aid series that offers long battery life, Bluetooth streaming, and superior speech clarity.</p>
+
       ),
     },
     {
-      question: "How long does the Hearing Aid’s Battery last?",
+      question: "Are EMI options available for Signia hearing aids?",
       answer: (
-        <p>Depending on the model, the battery lasts between 7 to 20 days.</p>
+        <p>Yes, We offer 0% Interest EMI options, allowing you to pay in easy monthly installments. Call us for attractive offers on EMI options.</p>
       ),
     },
     {
-      question: "Will Hearing Aids treat my Hearing Loss?",
+      question: "Which is the best Signia hearing aid for senior citizens?",
       answer: (
         <p>
-          Hearing aids do not restore your hearing but are the only remedy for
-          certain types of hearing loss. They help improve hearing and
-          communication, enhancing your quality of life.
+          The best hearing aids for seniors should have clear sound processing, 
+        easy controls, and rechargeable options. <b>Signia’s Motion X, Charge&Go, and Styletto</b> are great choices.
         </p>
       ),
     },
