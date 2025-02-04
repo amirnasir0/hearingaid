@@ -96,12 +96,12 @@ const PriceForm = () => {
             />
           </div>
           <div>
-            <textarea
+            <textarea style={{ display: "none" }}
               value={problem}
               onChange={(e) => setProblem(e.target.value)}
               placeholder="Tell us your problem"
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
-              required
+              
             />
           </div>
           <button
