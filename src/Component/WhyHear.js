@@ -7,8 +7,8 @@ const WhyHear = () => {
       description: "Explore hearing aid price list",
     },
     {
-      title: "1000+ certified clinics in 450+ cities",
-      description: "",
+      title: "11+ certified clinics",
+      description: "Multiple clinics near you with hundrers of skilled audiologists offering consultation.",
     },
     {
       title: "Protection+ Plan",
@@ -16,15 +16,15 @@ const WhyHear = () => {
     },
     {
       title: "Lifetime hearing care support",
-      description: "",
+      description: "Special care for senior citizen offering free home visits",
     },
     {
       title: "Interest free easy EMI plans",
-      description: "",
+      description: "Tranparent 0% EMI options with absolutely no hidden charges",
     },
     {
-      title: "40+ Lacs consultations in India",
-      description: "",
+      title: "Rated 4.9+ by 1200+ customers",
+      description: "Highest rated hearing care brand across the country.",
     },
   ];
 
