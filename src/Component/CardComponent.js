@@ -6,6 +6,7 @@ import image4 from "../Assets/image4.jpg";
 import image5 from "../Assets/image5.jpg";
 import image8 from "../Assets/image8.jpg";
 import DetailsForm from "../Component/TopForm/detailsForm.js";
+import PriceForm from "../Component/TopForm/PriceForm.js";
 
 const CardComponent = () => {
   const navigate = useNavigate();
@@ -122,7 +123,7 @@ const CardComponent = () => {
                 <p>Your details have been submitted successfully.</p>
               </div>
             ) : (
-              <DetailsForm onSubmit={handleSubmit} />
+              <PriceForm onSubmit={handleSubmit} />
             )}
           </div>
         </div>
