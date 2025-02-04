@@ -9,11 +9,11 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "Where can I get Original Signia (Seimens) hearing aids?",
+      question: "Where can I get Signia/Seimens hearing aids?",
       answer: (
         <p>Siemens, also know as Signia is a leading hearing aid brand.
-    You can purchase Signia hearing aids from Insono Hearing Clinic.
-    Rated 5.0 by 1200 customers, we offer free trial along with home visits for senior citizen hearing clinics. With 13+ years of experience,
+    You can purchase <b>Signia hearing aids</b> from Insono Hearing Clinic.
+    Rated <b>5.0 by 1200 customers</b>, we offer free trial along with home visits for senior citizen hearing clinics. With <b>13+ years of experience</b>,
     we are a leading brands for Signia Ear machines.</p>
       ),
     },
