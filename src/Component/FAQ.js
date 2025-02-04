@@ -11,21 +11,21 @@ const FAQs = () => {
     {
       question: "Where can I get Original Signia (Seimens) hearing aids?",
       answer: (
-        <p>Signia also know as Seimens is a leading hearing aid brand. You can purchase Signia hearing aids from <b>Insono Hearing Clinic</b>. Rated <b>5.0 by 1200 customers</b>, we offer free trial along with home visits for senior citizen hearing clinics. With 13+ years of experience, we are a leading brands for Signia Ear machines.</p>
+        <p>Signia also know as Seimens is a leading hearing aid brand. You can purchase Signia hearing aids from Insono Hearing Clinic. Rated 5.0 by 1200 customers, we offer free trial along with home visits for senior citizen hearing clinics. With 13+ years of experience, we are a leading brands for Signia Ear machines.</p>
       ),
     },
     {
       question: "What is the price of latest Signia Digital hearing aids in India?",
       answer: (
         <p>
-         In India, Signia hearing aids are available at different price points based on technology levels. Basic models <b>such as prompt or fun sp</b> start at ₹18,000, while premium models like <b>Signia Styletto or Charge&Go </b>can go up to ₹3,00,000.
+         In India, Signia hearing aids are available at different price points based on technology levels. Basic models such as prompt or fun sp start at ₹18,000, while premium models like <b>Signia Styletto or Charge&Go </b>can go up to ₹3,00,000.
         </p>
       ),
     },
     {
       question: "Does Signia offer invisible hearing aids?",
       answer: (
-        Yes, Signia provides <b>Invisible-in-Canal (IIC)</b> and <b>Completely-in-Canal (CIC) hearing aids</b>, which are discreet and nearly invisible when worn.
+        Yes, Signia provides Invisible-in-Canal (IIC)and Completely-in-Canal (CIC) hearing aids, which are discreet and nearly invisible when worn.
       ),
     },
     {
