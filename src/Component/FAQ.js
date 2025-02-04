@@ -101,6 +101,16 @@ const FAQs = () => {
           </div>
         ))}
       </div>
+      
+      {/* Add the button below FAQs */}
+      <div className="flex justify-center mt-6">
+        <a
+          href="tel:+917742573686"
+          className="bg-blue-600 text-white py-2 px-6 rounded-lg text-xl font-semibold hover:bg-blue-700 transition"
+        >
+          Talk to a Hearing Expert – Call Now
+        </a>
+      </div>
     </div>
   );
 };
