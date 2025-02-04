@@ -68,10 +68,10 @@ const DetailsForm = () => {
   return (
     <div className="max-w-lg mx-auto mt-10">
       <h2 className="text-2xl font-bold text-center text-gray-700">
-        Book Your Hearing Aid Trial
+        Apply for a Free Signia Hearing Aid Trial
       </h2>
       <p className="text-center text-gray-500 mb-6">
-        Fill in your details to claim your free trial and consult top audiologists.
+       Get a <b>FREE Hearing Test & Home Visit</b> – Limited Offer!
       </p>
       {formVisible && (
         <form onSubmit={handleSubmit} className="space-y-4">
