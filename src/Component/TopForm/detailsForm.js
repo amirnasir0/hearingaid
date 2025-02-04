@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ThankYouPage from "./Thankyou";
-import emailjs from "@emailjs/browser";
 
 const DetailsForm = () => {
   const [formVisible, setFormVisible] = useState(true);
@@ -51,20 +50,7 @@ const DetailsForm = () => {
         body: JSON.stringify(data),
       });
 
-      // Send email via EmailJS
-      // await emailjs.send(
-      //   "service_49sjwjf", // Replace with your EmailJS service ID
-      //   "template_s4z0rd3", // Replace with your EmailJS template ID
-      //   {
-      //     name: data.name,
-      //     phone: data.phone,
-      //     problem: data.problem,
-      //     refurl: data.refurl,
-      //     source: data.source,
-      //     email: "shubhamkumar83216@gmail.com", // Recipient email address
-      //   },
-      //   "eeWEv-3oUdlR-8zN-" // Replace with your EmailJS public key
-      // );
+  
 
       // Show thank you page
       setFormVisible(false);
