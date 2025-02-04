@@ -30,8 +30,9 @@ const App = () => {
               <HearingAidTrial />
               <SpecialCTA />
               <FeaturesSection />
-              <ComparisonTable />
+              
               <CardComponent />
+            <ComparisonTable />
               <WhyHear />
               
               <CustomerReviews />
