@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Component Imports
 import HearingAidTrial from "./Component/HearingAidTrial";
-import SpecialCTA from "./Component/SpecialCTA";
+
 import FeaturesSection from "./Component/featuresection";
 import CardComponent from "./Component/CardComponent";
 import WhyHear from "./Component/WhyHear";
@@ -28,7 +28,7 @@ const App = () => {
           element={
             <>
               <HearingAidTrial />
-              <SpecialCTA />
+             
               <FeaturesSection />
               
               <CardComponent />
