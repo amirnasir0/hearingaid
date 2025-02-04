@@ -11,7 +11,7 @@ const ThankYouPage = () => {
       <p className="text-center text-gray-600 mt-6">
         Meanwhile, you can{" "}
         <a
-          href="https://offers.hearwellhearing.in/wp-content/uploads/2024/12/HearWell_HearingPD.pdf"
+          href="https://prices.insonohearing.com/wp-content/uploads/2024/12/Insono.pdf"
           className="text-orange-500 hover:underline"
         >
           download the price list
