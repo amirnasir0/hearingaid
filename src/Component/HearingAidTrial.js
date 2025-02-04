@@ -74,10 +74,10 @@ const HearingAidTrial = () => {
             </div>
 
        <div className="flex items-center space-x-4">
-              <img src={secure} alt="Secure Rating" className="h-4" />
+              <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Secure Rating" className="h-4" />
               <div>
-                <p className="font-semibold">Norton</p>
-                <p className="text-green-500">Secured</p>
+                <p className="font-semibold">98%</p>
+                <p className="text-green-500">Success Rate</p>
               </div>
             </div>
           </div>
