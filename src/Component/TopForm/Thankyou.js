@@ -18,17 +18,17 @@ const ThankYouPage = () => {
         </a>{" "}
         or contact us via{" "}
         <a
-          href="https://api.whatsapp.com/send/?phone=918556086888&text=hi&type=phone_number&app_absent=0"
+          href="https://api.whatsapp.com/send/?phone=917742573686&text=hi&type=phone_number&app_absent=0"
           className="text-orange-500 hover:underline"
         >
           WhatsApp
         </a>{" "}
         or{" "}
         <a
-          href="tel:919955022067"
+          href="tel:917742573686"
           className="text-orange-500 hover:underline"
         >
-          call us at +91 9955022067
+          call us at 77425-73686
         </a>.
       </p>
     </div>
