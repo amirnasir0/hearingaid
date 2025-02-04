@@ -2,6 +2,7 @@ import React from "react";
 import video from "../Assets/video.mp4";
 import DetailsForm from "../Component/TopForm/detailsForm.js";
 import googleLogo from "../Assets/Google.svg";
+import SpecialCTA from "../Component/SpecialCTA.js"
 import trustpilotLogo from "../Assets/trustpilot.svg";
 import secure from "../Assets/secure.jpg";
 
@@ -37,7 +38,7 @@ const HearingAidTrial = () => {
               Special offers for Senior Citizen
             </li>
           </ul>
-
+<SpecialCTA />
           {/* Video Section */}
           <div className="mt-6">
             <video
