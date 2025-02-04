@@ -38,12 +38,12 @@ const DetailsForm = () => {
       problem,
       refurl,
       source,
-      medium: "cta_id_example", // Replace with unique ID if necessary
+      medium: "price download popup", // Replace with unique ID if necessary
     };
 
     try {
       // Send data to server
-      await fetch("https://hkdk.events/gpxuv3t1p1c23x", {
+      await fetch("https://chat-xbot.webspecia.in/api/iwh/ecf71fd692f9ede5e7593a573a864830", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
