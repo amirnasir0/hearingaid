@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../Assets/image1.jpg";
 import img2 from "../Assets/image2.jpg";
 import img3 from "../Assets/img3.png";
 import img4 from "../Assets/image4.png";
 import img5 from "../Assets/image5.png";
 import { useNavigate } from "react-router-dom";
+import DetailsForm from "../component/TopForm/detailsForm";
 
 const CardComponent = () => {
   const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const handleSubmit = () => setFormSubmitted(true);
+
   const cards = [
     {
       image: img1,
@@ -78,10 +83,7 @@ const CardComponent = () => {
     <div className="bg-gray-100 py-10">
       <div
         className="max-w-7xl mx-auto overflow-x-auto scrollbar-hide"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-        }}
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         <div className="flex space-x-6">
           {cards.map((card, index) => (
@@ -90,11 +92,11 @@ const CardComponent = () => {
               className="bg-white rounded-lg shadow-lg flex flex-col w-80 shrink-0"
             >
               {/* Image Section */}
-              <div className="h-48 w-full overflow-hidden">
+              <div className="h-48 w-full">
                 <img
                   src={card.image}
                   alt={card.title}
-                  className="w-full h-full object-center"
+                  className="w-full h-full object-cover"
                 />
               </div>
               {/* Content Section */}
@@ -110,7 +112,7 @@ const CardComponent = () => {
                 </ul>
                 <button
                   className="mt-4 bg-orange-600 text-white px-4 py-2 rounded w-full hover:bg-orange-700"
-                  onClick={() => navigate("/form")}
+                  onClick={() => setShowPopup(true)}
                 >
                   Get Price Estimate Now
                 </button>
@@ -119,6 +121,30 @@ const CardComponent = () => {
           ))}
         </div>
       </div>
+      {/* Popup Section */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative">
+            <button
+              onClick={() => {
+                setShowPopup(false);
+                setFormSubmitted(false);
+              }}
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+            >
+              ✕
+            </button>
+            {formSubmitted ? (
+              <div className="text-center">
+                <h2 className="text-xl font-semibold mb-4">Thank You!</h2>
+                <p>Your details have been submitted successfully.</p>
+              </div>
+            ) : (
+              <DetailsForm onSubmit={handleSubmit} />
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

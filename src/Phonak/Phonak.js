@@ -9,6 +9,8 @@ import WhyHear from "../Component/WhyHear";
 import AllRate from "../Component/AllRate";
 import CustomerReviews from "../Component/CustomerReviews";
 import FAQs from "../Component/FAQ";
+import ComparisonTable from "../Component/compare";
+import VideoTestimonials from "../Component/VideoTestomonial";
 const Phonak = () => {
   return (
     <>
@@ -16,10 +18,12 @@ const Phonak = () => {
       <HearingAidTrial />
       <SpecialCTA />
       <FeaturesSection />
+      <ComparisonTable/>
       <CardComponent />
       <WhyHear />
       <AllRate />
       <CustomerReviews />
+      <VideoTestimonials/>
       <FAQs/>
       <SpecialCTA />
     </>

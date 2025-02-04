@@ -14,25 +14,29 @@ import ThankYouForm from "./Component/CTA form/thankyouform";
 import Navbar from "./Component/CTA form/navbar";
 import Phonak from "./Phonak/Phonak";
 import FAQs from "./Component/FAQ";
+import ComparisonTable from "./Component/compare";
+import VideoTestimonials from "./Component/VideoTestomonial";
+
 const App = () => {
   return (
     <Router>
+      <Navbar /> {/* Placing it here so it remains persistent across routes */}
       <Routes>
         {/* Home Page Route */}
         <Route
           path="/"
           element={
             <>
-              <Navbar/>
               <HearingAidTrial />
               <SpecialCTA />
               <FeaturesSection />
+              <ComparisonTable />
               <CardComponent />
               <WhyHear />
               <AllRate />
               <CustomerReviews />
-              <FAQs/>
-              <SpecialCTA />
+              <VideoTestimonials/>
+              <FAQs />
             </>
           }
         />
@@ -42,7 +46,9 @@ const App = () => {
 
         {/* Thank You Page Route */}
         <Route path="/thank-you" element={<ThankYouForm />} />
-        <Route path="/Phonak" element={<Phonak />} />
+
+        {/* Phonak Page Route */}
+        <Route path="/phonak" element={<Phonak />} />
       </Routes>
     </Router>
   );
