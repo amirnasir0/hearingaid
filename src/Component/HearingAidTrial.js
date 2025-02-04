@@ -38,7 +38,7 @@ const HearingAidTrial = () => {
               Special offers for Senior Citizen
             </li>
           </ul>
-<SpecialCTA />
+
           {/* Video Section */}
           <div className="mt-6">
             <video
@@ -49,7 +49,7 @@ const HearingAidTrial = () => {
               loop
               className="w-full rounded-lg shadow-lg"
             ></video>
-               
+              <SpecialCTA /> 
           </div>
         </div>
 
