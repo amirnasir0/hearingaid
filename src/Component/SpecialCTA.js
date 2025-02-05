@@ -1,7 +1,7 @@
 // import React from "react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import DetailsForm from "../Component/TopForm/PriceForm.js";
+import PriceForm from "../Component/TopForm/PriceForm.js";
 
 const SpecialCTA = () => {
   const [showPopup, setShowPopup] = useState(false);
