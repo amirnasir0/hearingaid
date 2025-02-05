@@ -64,7 +64,7 @@ const HearingAidTrial = () => {
           </p>
 
           {/* Rating Card */}
-          <div className="mt-6 p-4 rounded-lg flex flex-col md:flex-row items-center gap-4 text-center ">
+          <div className="mt-6 p-4 rounded-lg flex flex-wrap items-center gap-4 text-center justify-center">
             <div className="flex items-center space-x-4">
               <img src={googleLogo} alt="Google Rating" className="h-4" />
               <div>
@@ -88,6 +88,7 @@ const HearingAidTrial = () => {
               </div>
             </div>
           </div>
+            
         </div>
       </div>
     </div>
