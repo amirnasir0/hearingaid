@@ -68,9 +68,9 @@ const WhyHear = () => {
        <div className="mt-8 flex justify-center gap-4">
           
           <button
-            onClick={scrollToSection}
-            className="px-6 py-3 bg-blue-500 text-white text-lg rounded-lg shadow-lg hover:bg-blue-600 transition"
-          >
+  onClick={scrollToTop}
+  className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600 transition"
+>
             Get Started Today!
           </button>
 
