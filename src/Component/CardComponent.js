@@ -81,6 +81,9 @@ const CardComponent = () => {
 
   return (
     <div className="bg-gray-100 py-10">
+    <h2 className="text-2xl font-bold text-center mb-6">
+       Best Signia Hearing Aids in India
+      </h2>
       <div className="max-w-7xl mx-auto overflow-x-auto scrollbar-hide" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         <div className="flex space-x-6">
           {cards.map((card, index) => (
