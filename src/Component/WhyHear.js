@@ -1,6 +1,9 @@
 import React from "react";
-import SpecialCTA from "../Component/SpecialCTA.js";
 
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 const WhyHear = () => {
   const features = [
     {
@@ -63,15 +66,20 @@ const WhyHear = () => {
 
         {/* ✅ Two Buttons at Bottom of Component */}
        <div className="mt-8 flex justify-center gap-4">
-          {/* SpecialCTA Button */}
-          <SpecialCTA buttonText="Get Started Today" />
+          
+          <button
+            onClick={scrollToSection}
+            className="px-6 py-3 bg-blue-500 text-white text-lg rounded-lg shadow-lg hover:bg-blue-600 transition"
+          >
+            Get Started Today!
+          </button>
 
           {/* Call Button Styled as a Button */}
           <button
-            onClick={() => window.location.href = "tel:+919876543210"}
+            onClick={() => window.location.href = "tel:+917742573686"}
             className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
           >
-            📞 Call Now
+            📞 Call us for Best deals
           </button>
         </div>
       </div>
