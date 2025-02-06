@@ -1,4 +1,5 @@
 import React from "react";
+import SpecialCTA from "../Component/SpecialCTA.js";
 
 const WhyHear = () => {
   const features = [
@@ -8,7 +9,7 @@ const WhyHear = () => {
     },
     {
       title: "11+ certified clinics",
-      description: "Multiple clinics near you with hundrers of skilled audiologists offering consultation.",
+      description: "Multiple clinics near you with hundreds of skilled audiologists offering consultation.",
     },
     {
       title: "Protection+ Plan",
@@ -16,11 +17,11 @@ const WhyHear = () => {
     },
     {
       title: "Lifetime hearing care support",
-      description: "Special care for senior citizen offering free home visits",
+      description: "Special care for senior citizens offering free home visits",
     },
     {
       title: "Interest free easy EMI plans",
-      description: "Tranparent 0% EMI options with absolutely no hidden charges",
+      description: "Transparent 0% EMI options with absolutely no hidden charges",
     },
     {
       title: "Rated 4.9+ by 1200+ customers",
@@ -29,9 +30,10 @@ const WhyHear = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-8">
+    <div className="bg-gray-50 py-8 relative">
+      {/* ✅ Content Section */}
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">Insono-#1 Choise for Hearing Aids?</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Insono-#1 Choice for Hearing Aids?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start">
@@ -58,6 +60,20 @@ const WhyHear = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* ✅ Two Buttons (Side by Side) */}
+      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4">
+        {/* SpecialCTA Button */}
+        <SpecialCTA buttonText="Get Latest Prices" />
+
+        {/* Call Button */}
+        <a
+          href="tel:+919876543210"
+          className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
+        >
+          📞 Call us for Best Price
+        </a>
       </div>
     </div>
   );
