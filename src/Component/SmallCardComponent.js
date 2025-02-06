@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import image1 from "../Assets/iic_insioix.jpg";
-import image2 from "../Assets/image2.jpg";
+import image2 from "../Assets/silk_ix.jpg";
 import image4 from "../Assets/image4.jpg";
 import image5 from "../Assets/image5.jpg";
 import image8 from "../Assets/image8.jpg";
