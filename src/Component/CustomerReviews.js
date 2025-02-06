@@ -38,7 +38,7 @@ const CustomerReviews = () => {
     <div className="bg-orange-50 py-8 px-4">
       {/* Header Section */}
       <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
-        Trusted by 4,00,000+ Customers
+        Trusted by Over <b>40,000 Hearing Aid Users</b> Across India
       </h2>
       <div className="mb-8">
         <img
