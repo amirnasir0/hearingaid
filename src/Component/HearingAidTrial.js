@@ -14,7 +14,7 @@ const HearingAidTrial = () => {
         {/* Left Section */}
         <div className="flex-1 w-full md:w-auto">
           <h1 className="text-2xl md:text-4xl font-bold mt-6">
-           Signia Digital Hearing Aids for Clear Hearing
+           Best Hearing Aids in India – Compare Prices & Buy Signia Hearing Aids
           </h1>
           <ul className="mt-4 space-y-2 text-lg">
             <li className="flex items-center">
