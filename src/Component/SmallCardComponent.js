@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import image1 from "../Assets/image1.jpg";
+import image1 from "../Assets/iic_insioix.jpg";
 import image2 from "../Assets/image2.jpg";
 import image4 from "../Assets/image4.jpg";
 import image5 from "../Assets/image5.jpg";
