@@ -69,7 +69,7 @@ const WhyHear = () => {
           
           <button
   onClick={scrollToTop}
-  className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-600 transition"
+  className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
 >
             Get Started Today!
           </button>
