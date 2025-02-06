@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import PriceForm from "../Component/TopForm/PriceForm.js";
 
-const SpecialCTA = () => {
+const SpecialCTA = ({ buttonText = "Download Latest Price List" }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const navigate = useNavigate();
