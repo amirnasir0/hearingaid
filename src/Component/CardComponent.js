@@ -100,7 +100,7 @@ const CardComponent = () => {
                   className="mt-4 bg-orange-600 text-white px-4 py-2 rounded w-full hover:bg-orange-700"
                   onClick={() => setShowPopup(true)}
                 >
-                  Get Price Estimate Now
+                  Get the Best Price
                 </button>
               </div>
             </div>
