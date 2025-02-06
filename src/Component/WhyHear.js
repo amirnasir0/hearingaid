@@ -30,10 +30,10 @@ const WhyHear = () => {
   ];
 
   return (
-    <div className="bg-gray-50 py-8 relative">
+    <div className="bg-gray-50 py-8">
       {/* ✅ Content Section */}
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">Insono-#1 Choice for Hearing Aids?</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Insono - #1 Choice for Hearing Aids?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start">
@@ -60,20 +60,20 @@ const WhyHear = () => {
             </div>
           ))}
         </div>
-      </div>
 
-      {/* ✅ Two Buttons (Side by Side) */}
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 flex gap-4">
-        {/* SpecialCTA Button */}
-        <SpecialCTA buttonText="Get Latest Prices" />
+        {/* ✅ Two Buttons at Bottom of Component */}
+        <div className="mt-8 flex justify-center gap-4">
+          {/* SpecialCTA Button */}
+          <SpecialCTA buttonText="Get Latest Prices" />
 
-        {/* Call Button */}
-        <a
-          href="tel:+919876543210"
-          className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
-        >
-          📞 Call us for Best Price
-        </a>
+          {/* Call Button */}
+          <a
+            href="tel:+917742573686"
+            className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
+          >
+            📞 Call us for best offers
+          </a>
+        </div>
       </div>
     </div>
   );
