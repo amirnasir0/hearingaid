@@ -7,7 +7,7 @@ import image5 from "../Assets/image5.jpg";
 import image8 from "../Assets/image8.jpg";
 import PriceForm from "../Component/TopForm/PriceForm.js";
 
-const sCardComponent = () => {
+const SmallCardComponent = () => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -67,4 +67,4 @@ const sCardComponent = () => {
   );
 };
 
-export default sCardComponent;
+export default SmallCardComponent;
