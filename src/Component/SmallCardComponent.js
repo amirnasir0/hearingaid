@@ -27,6 +27,9 @@ const SmallCardComponent = () => {
 
   return (
     <div className="bg-gray-100 py-6">
+    <h2 className="text-2xl font-bold text-center mb-6">
+       Best Selling Invisible Hearing Aids
+      </h2>
       <div className="max-w-7xl mx-auto overflow-x-auto scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
         <div className="flex gap-4 px-4">
           {cards.map((card, index) => (
