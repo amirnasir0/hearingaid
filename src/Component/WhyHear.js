@@ -62,17 +62,17 @@ const WhyHear = () => {
         </div>
 
         {/* ✅ Two Buttons at Bottom of Component */}
-        <div className="mt-8 flex justify-center gap-4">
+       <div className="mt-8 flex justify-center gap-4">
           {/* SpecialCTA Button */}
-          <SpecialCTA buttonText="Get Latest Prices" />
+          <SpecialCTA buttonText="Get Started Today" />
 
-          {/* Call Button */}
-          <a
-            href="tel:+917742573686"
+          {/* Call Button Styled as a Button */}
+          <button
+            onClick={() => window.location.href = "tel:+919876543210"}
             className="px-6 py-3 bg-green-500 text-white text-lg rounded-lg shadow-lg hover:bg-green-600 transition flex items-center"
           >
-            📞 Call us for best offers
-          </a>
+            📞 Call Now
+          </button>
         </div>
       </div>
     </div>
