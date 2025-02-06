@@ -31,7 +31,7 @@ const WhyHear = () => {
   return (
     <div className="bg-gray-50 py-8">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">Why Insono Solution?</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Why Choose Insono for the Best Hearing Aids?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start">
