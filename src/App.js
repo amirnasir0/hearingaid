@@ -6,7 +6,6 @@ import HearingAidTrial from "./Component/HearingAidTrial";
 
 import FeaturesSection from "./Component/featuresection";
 import CardComponent from "./Component/CardComponent";
-import sCardComponent from "./Component/sCardComponent";
 import WhyHear from "./Component/WhyHear";
 
 import CustomerReviews from "./Component/CustomerReviews";
@@ -29,11 +28,9 @@ const App = () => {
           element={
             <>
               <HearingAidTrial />
-             
-              <FeaturesSection />
-              
+
               <CardComponent />
-            <sCardComponent />
+           <FeaturesSection />
             <ComparisonTable />
             
               <WhyHear />
