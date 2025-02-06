@@ -6,7 +6,7 @@ import HearingAidTrial from "./Component/HearingAidTrial";
 
 import FeaturesSection from "./Component/featuresection";
 import CardComponent from "./Component/CardComponent";
-import CardComponent from "./Component/SmallCardComponent";
+import SmallCardComponent from "./Component/SmallCardComponent";
 import WhyHear from "./Component/WhyHear";
 
 import CustomerReviews from "./Component/CustomerReviews";
