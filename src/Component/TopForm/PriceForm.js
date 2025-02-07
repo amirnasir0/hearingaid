@@ -6,8 +6,6 @@ const PriceForm = () => {
   const [thankYouVisible, setThankYouVisible] = useState(false);
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
-  const [problem, setProblem] = useState("");
-  const [whatsappConsent, setWhatsappConsent] = useState(false); // State for checkbox
   const [errorMessage, setErrorMessage] = useState("");
 
   // Validate phone number
@@ -17,7 +15,7 @@ const PriceForm = () => {
     e.preventDefault();
 
     // Validate form inputs
-    if (!phone || !name || !problem) {
+    if (!phone || !name ) {
       setErrorMessage("Please fill in all fields.");
       return;
     }
@@ -31,10 +29,11 @@ const PriceForm = () => {
     const refurl = document.referrer || "N/A";
     const source = window.location.href;
 
+
     const data = {
       phone: "91" + phone,
       name,
-      problem,
+      problem:"Price Download",
       refurl,
       source,
       medium: "price download popup", // Replace with unique ID if necessary
@@ -66,7 +65,7 @@ const PriceForm = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto mt-10">
+    <div className="max-w-lg mx-auto mt-10 pd-thanks">
       <h2 className="text-2xl font-bold text-center text-gray-700">
         Hearing Aid Price List 
       </h2>
