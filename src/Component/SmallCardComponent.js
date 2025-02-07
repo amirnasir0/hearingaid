@@ -16,9 +16,9 @@ const SmallCardComponent = () => {
 
   const cards = [
     { image: image1, title: "Signia Insio IX", rating: 5 },
-    { image: image2, title: "Signia Styletto IX", rating: 5 },
-    { image: image4, title: "Signia Motion X", rating: 5 },
-    { image: image5, title: "Signia Pure AX", rating: 5 },
+    { image: image2, title: "Signia Silk IX", rating: 5 },
+    { image: image4, title: "Phonak Virto IIC Series", rating: 5 },
+    { image: image5, title: "Phonak Virto IIC Series", rating: 5 },
     { image: image8, title: "Signia Silk IX", rating: 5 },
   ];
 
