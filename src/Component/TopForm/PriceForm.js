@@ -94,15 +94,15 @@ const PriceForm = () => {
               required
             />
           </div>
-          <div>
-            <textarea style={{ display: "none" }}
-              value={problem}
-              onChange={(e) => setProblem(e.target.value)}
-              placeholder="Tell us your problem"
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+          // <div>
+          //   <textarea style={{ display: "none" }}
+          //     value={problem}
+          //     onChange={(e) => setProblem(e.target.value)}
+          //     placeholder="Tell us your problem"
+          //     className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               
-            />
-          </div>
+          //   />
+          // </div>
           <button
             type="submit"
             className="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
