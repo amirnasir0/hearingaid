@@ -4,7 +4,7 @@ import image1 from "../Assets/iic_insioix.jpg";
 import image2 from "../Assets/silk_ix.webp";
 import image4 from "../Assets/phonak_virto_iic.png";
 import image5 from "../Assets/widex_evoke.webp";
-import image8 from "../Assets/image8.jpg";
+import image8 from "../Assets/Resound-Linx-3d-Hearing-aid.webp";
 import PriceForm from "../Component/TopForm/PriceForm.js";
 
 const SmallCardComponent = () => {
@@ -19,7 +19,7 @@ const SmallCardComponent = () => {
     { image: image2, title: "Signia Silk IX", rating: 5 },
     { image: image4, title: "Phonak Virto IIC Series", rating: 5 },
     { image: image5, title: "Widex Evoke Series", rating: 5 },
-    { image: image8, title: "Signia Silk IX", rating: 5 },
+    { image: image8, title: "Resound Linx 3d Hearing aid", rating: 5 },
   ];
 
   const renderStars = (rating) =>
