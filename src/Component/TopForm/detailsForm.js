@@ -50,7 +50,17 @@ const DetailsForm = () => {
         body: JSON.stringify(data),
       });
 
-  
+  // ✅ Trigger Google Tag Manager Event
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "main_lead_submission", // Custom GTM Event Name
+      phone: "91" + phone,
+      name: name,
+      referrer: refurl,
+      source: source,
+    });
+
+    console.log("GTM Event Triggered: lead_submission");
 
       // Show thank you page
       setFormVisible(false);
