@@ -19,7 +19,7 @@ const SmallCardComponent = () => {
     { image: image2, title: "Signia Silk IX", rating: 5 },
     { image: image4, title: "Phonak Virto IIC Series", rating: 5 },
     { image: image5, title: "Widex Evoke Series", rating: 5 },
-    { image: image8, title: "Resound Linx 3d Hearing aid", rating: 5 },
+    { image: image8, title: "Resound Linx 3d", rating: 5 },
   ];
 
   const renderStars = (rating) =>
