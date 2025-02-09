@@ -66,11 +66,12 @@ const HearingAidTrial = () => {
           <div className="mt-6 p-4 rounded-lg flex items-center gap-4 text-center overflow-x-auto">
             <div className="flex items-center space-x-4">
 
-<div className="mt-6 grid grid-cols-3 gap-4 text-center">
-  <div>
+//
+<div className="mt-6 flex flex-col sm:flex-row justify-between items-center text-left space-y-4 sm:space-y-0 sm:space-x-6">
+  <div className="flex items-center space-x-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8 mx-auto text-blue-600"
+      className="h-8 w-8 text-blue-600"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -82,13 +83,16 @@ const HearingAidTrial = () => {
         d="M15 12h3m4 0h-1M4 6h16M4 18h16M4 12h3m4 0h3m-4 6V6m4 6V6m-4 6v6m4 0v-6"
       />
     </svg>
-    <p className="text-xl font-bold">75+</p>
-    <p className="text-sm text-gray-600">Clinics</p>
+    <div>
+      <p className="text-xl font-bold">75+</p>
+      <p className="text-sm text-gray-600">Clinics</p>
+    </div>
   </div>
-  <div>
+
+  <div className="flex items-center space-x-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8 mx-auto text-blue-600"
+      className="h-8 w-8 text-blue-600"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -100,13 +104,16 @@ const HearingAidTrial = () => {
         d="M12 8v4l3 3m9 1a9 9 0 11-18 0 9 9 0 0118 0z"
       />
     </svg>
-    <p className="text-xl font-bold">15+</p>
-    <p className="text-sm text-gray-600">Years Experience</p>
+    <div>
+      <p className="text-xl font-bold">15+</p>
+      <p className="text-sm text-gray-600">Years Experience</p>
+    </div>
   </div>
-  <div>
+
+  <div className="flex items-center space-x-4">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-8 w-8 mx-auto text-blue-600"
+      className="h-8 w-8 text-blue-600"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -118,10 +125,15 @@ const HearingAidTrial = () => {
         d="M14.1 9a3 3 0 11-4.2 0m4.2 0a3.5 3.5 0 01-4.2 0m4.2 0A5.5 5.5 0 108.9 9m8.4 0a5.5 5.5 0 00-8.4 0m6.4 4l1.6 2H6l1.6-2M4 15l1 5m14-5l-1 5"
       />
     </svg>
-    <p className="text-xl font-bold">100+</p>
-    <p className="text-sm text-gray-600">Audiologists</p>
+    <div>
+      <p className="text-xl font-bold">100+</p>
+      <p className="text-sm text-gray-600">Audiologists</p>
+    </div>
   </div>
 </div>
+
+
+            //
 
             
             </div>
