@@ -66,7 +66,7 @@ const HearingAidTrial = () => {
           <div className="mt-6 p-4 rounded-lg flex items-center gap-4 text-center overflow-x-auto">
             <div className="flex items-center space-x-4">
 
-//
+
 <div className="mt-6 flex flex-col sm:flex-row justify-between items-center text-left space-y-4 sm:space-y-0 sm:space-x-6">
   <div className="flex items-center space-x-4">
     <svg
@@ -133,7 +133,7 @@ const HearingAidTrial = () => {
 </div>
 
 
-            //
+           
 
             
             </div>
