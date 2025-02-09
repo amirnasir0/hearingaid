@@ -66,18 +66,64 @@ const HearingAidTrial = () => {
           {/* Rating Card */}
           <div className="mt-6 p-4 rounded-lg flex flex-row flex-nowrap items-center gap-4 text-center overflow-x-auto">
             <div className="flex items-center space-x-4">
-              <img src={googleLogo} alt="Google Rating" className="h-4" />
-              <div>
-                <p className="font-semibold">4.9/5</p>
-                <p className="text-yellow-500">★★★★★</p>
-              </div>
+              <<div className="mt-6 grid grid-cols-3 gap-4 text-center">
+  <div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8 mx-auto text-blue-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 12h3m4 0h-1M4 6h16M4 18h16M4 12h3m4 0h3m-4 6V6m4 6V6m-4 6v6m4 0v-6"
+      />
+    </svg>
+    <p className="text-xl font-bold">75+</p>
+    <p className="text-sm text-gray-600">Clinics</p>
             </div>
             <div className="flex items-center space-x-4">
-              <img src={trustpilotLogo} alt="Trustpilot Rating" className="h-4" />
-              <div>
-                <p className="font-semibold">4.8/5</p>
-                <p className="text-green-500">★★★★★</p>
-              </div>
+              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+  <div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8 mx-auto text-blue-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 12h3m4 0h-1M4 6h16M4 18h16M4 12h3m4 0h3m-4 6V6m4 6V6m-4 6v6m4 0v-6"
+      />
+    </svg>
+    <p className="text-xl font-bold">75+</p>
+    <p className="text-sm text-gray-600">Clinics</p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+  <div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-8 w-8 mx-auto text-blue-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 12h3m4 0h-1M4 6h16M4 18h16M4 12h3m4 0h3m-4 6V6m4 6V6m-4 6v6m4 0v-6"
+      />
+    </svg>
+    <p className="text-xl font-bold">75+</p>
+    <p className="text-sm text-gray-600">Clinics</p>
             </div>
 
       
