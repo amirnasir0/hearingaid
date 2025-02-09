@@ -66,8 +66,8 @@ const HearingAidTrial = () => {
           
 
 
-<div className="mt-6 flex flex-row flex-wrap justify-between items-center text-left space-y-0 sm:space-x-6">
-  <div className="flex items-center space-x-4">
+<div className="mt-6 flex flex-row justify-between items-center text-left flex-nowrap space-x-6">
+  <div className="flex items-center flex-1 space-x-4">
     🏥  
     <div>
       <p className="text-xl font-bold">75+</p>
@@ -75,7 +75,7 @@ const HearingAidTrial = () => {
     </div>
   </div>
 
-  <div className="flex items-center space-x-4">
+  <div className="flex items-center flex-1 space-x-4">
     ⚡ 
     <div>
       <p className="text-xl font-bold">15+</p>
@@ -83,7 +83,7 @@ const HearingAidTrial = () => {
     </div>
   </div>
 
-  <div className="flex items-center space-x-4">
+  <div className="flex items-center flex-1 space-x-4">
     👨‍⚕️
     <div>
       <p className="text-xl font-bold">100+</p>
@@ -91,6 +91,7 @@ const HearingAidTrial = () => {
     </div>
   </div>
 </div>
+
 
 
 
