@@ -35,7 +35,7 @@ const ComparisonTable = () => {
                   <td className="border border-gray-300 p-3 text-gray-700 font-medium">
                     {offer}
                   </td>
-                  <td className="border border-gray-300 p-3  text-white text-lg">✔</td>
+                  <td className="border border-gray-300 p-3  text-white text-lg">✅</td>
                   <td className="border border-gray-300 p-3 text-lg">✖</td>
                 </tr>
               ))}
