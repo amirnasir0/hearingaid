@@ -46,13 +46,14 @@ const HearingAidTrial = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Left Section */}
         <div className="flex-1 w-full md:w-auto">
+    <h1 className="text-2xl md:text-4xl font-bold mt-6">{headline}</h1>
           {/* Dynamic Hero Image */}
           <img
             src={image}
             alt="Hearing Aid Model"
             className="w-full rounded-lg shadow-lg"
           />
-          <h1 className="text-2xl md:text-4xl font-bold mt-6">{headline}</h1>
+          
           <ul className="mt-4 space-y-2 text-lg">
             <li className="flex items-center">
               <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
