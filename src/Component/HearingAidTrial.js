@@ -1,16 +1,19 @@
 import React from "react";
 import DetailsForm from "../Component/TopForm/detailsForm.js";
 import SpecialCTA from "../Component/SpecialCTA.js";
+import prompt from "../Assets/signia-prompt.jpg";
+import styletto from "../Assets/signia-styletto.jpg";
+import defaultimg from "../Assets/image3.jpg";
 
 const HearingAidTrial = () => {
   // Model mappings
   const modelMappings = {
     "signia prompt": {
-      image: "../Assets/signia-prompt.jpg", // Replace with actual image path
+      image: prompt, // Replace with actual image path
       headline: "Signia Prompt 3X - Advanced Hearing Technology",
     },
     "styletto signia": {
-      image: "../Assets/signia-styletto.jpg", // Replace with actual image path
+      image: styletto, // Replace with actual image path
       headline: "Styletto Signia 3AX - Sleek and Powerful",
     },
     // Add more models as needed
@@ -31,7 +34,7 @@ const HearingAidTrial = () => {
 
   // Default fallback
   const defaultContent = {
-    image: "../Assets/image3.jpg", // Replace with default image path
+    image: defaultimg, // Replace with default image path
     headline: "Best Hearing Aids in India – Compare Prices & Buy Signia Hearing Aids",
   };
 
