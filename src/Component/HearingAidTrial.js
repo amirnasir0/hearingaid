@@ -21,7 +21,7 @@ const HearingAidTrial = () => {
 
   // Extract search query from URL
   const urlParams = new URLSearchParams(window.location.search);
-  const searchQuery = urlParams.get('q')?.toLowerCase() || '';
+  const searchKeyword = urlParams.get('utm_term')?.toLowerCase() || '';
 
   // Match search query with models
   let matchedModel = null;
