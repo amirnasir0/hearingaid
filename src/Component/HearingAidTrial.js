@@ -26,7 +26,7 @@ const HearingAidTrial = () => {
   // Match search query with models
   let matchedModel = null;
   for (const model in modelMappings) {
-    if (searchQuery.includes(model)) {
+    if (searchKeyword.includes(model)) {
       matchedModel = modelMappings[model];
       break;
     }
