@@ -96,7 +96,7 @@ const HearingAidTrial = () => {
           {/* Rating Card */}
           <div className="mt-6 flex flex-row justify-between items-center text-left flex-nowrap space-x-6">
             <div className="flex items-center flex-1 space-x-4">
-              �️
+              🏥
               <div>
                 <p className="text-xl font-bold">75+</p>
                 <p className="text-sm text-gray-600">Clinics</p>
