@@ -19,46 +19,70 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-WZK6FX5C');</script>
 <!-- End Google Tag Manager -->
-    <script>
-  (function() {
-    // Define your server-side GTM container URL
-    const sGTMUrl = 'https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702';
+    
+   <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form'); // Select your form
 
-    // Function to generate a unique browser ID
-    function getBrowserId() {
-      let browserId = localStorage.getItem('browser_id');
-      if (!browserId) {
-        browserId = 'browser-' + Math.random().toString(36).substr(2, 16);
-        localStorage.setItem('browser_id', browserId);
-      }
-      return browserId;
+    function getVisitorData() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return {
+        gclid: urlParams.get('gclid') || null,
+        fbclid: urlParams.get('fbclid') || null,
+        userAgent: navigator.userAgent,
+        referrer: document.referrer,
+        pageURL: window.location.href
+      };
     }
 
-    // Collect data to send
-    const data = {
-      event: 'page_view',
-      url: window.location.href,
-      referrer: document.referrer,
-      user_agent: navigator.userAgent,
-      timestamp: new Date().toISOString(),
-      fbclid: new URLSearchParams(window.location.search).get('fbclid'),
-      gclid: new URLSearchParams(window.location.search).get('gclid'),
-      browser_id: getBrowserId(),
-      // Add other relevant data as needed
-    };
+    async function getIPAddress() {
+      try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+      } catch (error) {
+        console.error('IP fetch error:', error);
+        return null;
+      }
+    }
 
-    // Send data to the server-side GTM container
-    fetch(sGTMUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-    .then(response => console.log('Data sent successfully:', response))
-    .catch(error => console.error('Error sending data:', error));
-  })();
+    async function sendTrackingData(eventType, formData = null) {
+      const visitorData = getVisitorData();
+      const ip = await getIPAddress();
+
+      const payload = {
+        event: eventType,
+        visitorData: { ...visitorData, ip },
+        formData: formData
+      };
+
+      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(response => response.json())
+        .then(result => console.log('Tracking sent successfully'))
+        .catch(error => console.error('Error sending tracking:', error));
+    }
+
+    // Capture page view on load
+    sendTrackingData('page_view');
+
+    // Capture form submission
+    if (form) {
+      form.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const formDataObj = {};
+        const formData = new FormData(form);
+        formData.forEach((value, key) => { formDataObj[key] = value; });
+
+        await sendTrackingData('form_submission', formDataObj);
+        form.submit();
+      });
+    }
+  });
 </script>
+
 
   </head>
   <body>
