@@ -30,11 +30,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         event: 'page_view',
         visitorData: { ...visitorData, ip }
       };
-      fetch('https://your-server-endpoint.com/track', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      }).catch(error => console.error('Page view tracking error:', error));
+      try {
+        await fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+      } catch (error) {
+        console.error('Page view tracking error:', error);
+      }
     })();
 
     // Track form submissions
@@ -54,12 +58,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           formData: hashFormData(formDataObj)
         };
 
-        fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        }).then(() => form.submit())
-          .catch(error => { console.error('Form tracking error:', error); form.submit(); });
+        try {
+          await fetch('https://your-server-endpoint.com/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          form.submit();
+        } catch (error) {
+          console.error('Form tracking error:', error);
+          form.submit();
+        }
       }
     });
 
@@ -96,7 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     async function getIPAddress() {
       try {
-        const response = await fetch('https://api.ipify.org?format=json');
+        const response = await fetch('https://api.ipify.org?format=json', { method: 'GET', mode: 'cors', cache: 'no-cache' });
         const data = await response.json();
         return data.ip;
       } catch (error) {
@@ -114,6 +123,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   });
 </script>
+
 
 
 
