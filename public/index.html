@@ -26,11 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
     try {
       const visitorData = await getVisitorData();
       const ip = await getIPAddress();
-      const payload = JSON.stringify({
+      const payload = {
         event: 'page_view',
         visitorData: { ...visitorData, ip }
+      };
+      await fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
-      navigator.sendBeacon('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', payload);
     } catch (error) {
       console.error('Page view tracking error:', error);
     }
@@ -45,12 +49,16 @@ document.addEventListener('DOMContentLoaded', function() {
       try {
         const visitorData = await getVisitorData();
         const ip = await getIPAddress();
-        const payload = JSON.stringify({
+        const payload = {
           event: 'form_submission',
           visitorData: { ...visitorData, ip },
           formData: formDataObj
+        };
+        await fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
         });
-        navigator.sendBeacon('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', payload);
         form.submit();
       } catch (error) {
         console.error('Form tracking error:', error);
@@ -102,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
 
 
 
