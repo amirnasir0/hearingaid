@@ -22,31 +22,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    document.body.addEventListener('submit', async function(event) {
-      event.preventDefault(); // Prevent default form submission
-      const formDataObj = {};
-      const formData = new FormData(event.target);
-      formData.forEach((value, key) => { formDataObj[key] = value; });
-
-      const visitorData = getVisitorData();
+    // Track page views
+    (async function() {
+      const visitorData = await getVisitorData();
       const ip = await getIPAddress();
       const payload = {
-        event: 'form_submission',
-        visitorData: { ...visitorData, ip },
-        formData: hashFormData(formDataObj)
+        event: 'page_view',
+        visitorData: { ...visitorData, ip }
       };
-
-      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+      fetch('https://your-server-endpoint.com/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
-      }).then(response => console.log('Form tracking sent'))
-        .catch(error => console.error('Tracking error:', error));
+      }).catch(error => console.error('Page view tracking error:', error));
+    })();
 
-      event.target.submit(); // Submit the form after tracking
-    }, true);
+    // Track form submissions
+    document.addEventListener('submit', async function(event) {
+      const form = event.target;
+      if (form.tagName === 'FORM') {
+        event.preventDefault();
+        const formDataObj = {};
+        const formData = new FormData(form);
+        formData.forEach((value, key) => { formDataObj[key] = value; });
 
-    function getVisitorData() {
+        const visitorData = await getVisitorData();
+        const ip = await getIPAddress();
+        const payload = {
+          event: 'form_submission',
+          visitorData: { ...visitorData, ip },
+          formData: hashFormData(formDataObj)
+        };
+
+        fetch('https://your-server-endpoint.com/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(() => form.submit())
+          .catch(error => { console.error('Form tracking error:', error); form.submit(); });
+      }
+    });
+
+    async function getVisitorData() {
       const urlParams = new URLSearchParams(window.location.search);
       return {
         gclid: urlParams.get('gclid') || null,
@@ -54,14 +71,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         userAgent: navigator.userAgent,
         referrer: document.referrer,
         pageURL: window.location.href,
-        browserId: localStorage.getItem('browserId') || generateBrowserId(),
+        browserId: getBrowserId(),
         sessionId: getSessionId()
       };
     }
 
-    function generateBrowserId() {
-      const id = 'browser-' + Math.random().toString(36).substr(2, 18);
-      localStorage.setItem('browserId', id);
+    function getBrowserId() {
+      let id = localStorage.getItem('browserId');
+      if (!id) {
+        id = 'browser-' + Math.random().toString(36).substr(2, 18);
+        localStorage.setItem('browserId', id);
+      }
       return id;
     }
 
@@ -80,6 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const data = await response.json();
         return data.ip;
       } catch (error) {
+        console.error('IP fetch error:', error);
         return null;
       }
     }
@@ -93,6 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   });
 </script>
+
 
 
 
