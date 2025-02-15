@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WZK6FX5C');</script>
 <!-- End Google Tag Manager -->
     
-   <script>
+ <script>
   document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form'); // Select your form
 
@@ -31,8 +31,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         fbclid: urlParams.get('fbclid') || null,
         userAgent: navigator.userAgent,
         referrer: document.referrer,
-        pageURL: window.location.href
+        pageURL: window.location.href,
+        browserId: localStorage.getItem('browserId') || generateBrowserId()
       };
+    }
+
+    function generateBrowserId() {
+      const id = 'browser-' + Math.random().toString(36).substr(2, 18);
+      localStorage.setItem('browserId', id);
+      return id;
     }
 
     async function getIPAddress() {
@@ -56,7 +63,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         formData: formData
       };
 
-      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+      fetch('https://your-server-endpoint.com/track', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -82,6 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   });
 </script>
+
 
 
   </head>
