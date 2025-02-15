@@ -22,11 +22,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
+    document.body.addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent default form submission
+      const formDataObj = {};
+      const formData = new FormData(event.target);
+      formData.forEach((value, key) => { formDataObj[key] = value; });
+
+      const visitorData = getVisitorData();
+      const ip = await getIPAddress();
+      const payload = {
+        event: 'form_submission',
+        visitorData: { ...visitorData, ip },
+        formData: hashFormData(formDataObj)
+      };
+
+      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(response => console.log('Form tracking sent'))
+        .catch(error => console.error('Tracking error:', error));
+
+      event.target.submit(); // Submit the form after tracking
+    }, true);
 
     function getVisitorData() {
       const urlParams = new URLSearchParams(window.location.search);
-      const sessionId = getSessionId();
       return {
         gclid: urlParams.get('gclid') || null,
         fbclid: urlParams.get('fbclid') || null,
@@ -34,10 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         referrer: document.referrer,
         pageURL: window.location.href,
         browserId: localStorage.getItem('browserId') || generateBrowserId(),
-        sessionId: sessionId,
-        utm_source: urlParams.get('utm_source') || null,
-        utm_medium: urlParams.get('utm_medium') || null,
-        utm_campaign: urlParams.get('utm_campaign') || null
+        sessionId: getSessionId()
       };
     }
 
@@ -62,53 +80,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         const data = await response.json();
         return data.ip;
       } catch (error) {
-        console.error('IP fetch error:', error);
         return null;
       }
-    }
-
-    async function sendTrackingData(eventType, formData = null) {
-      const visitorData = getVisitorData();
-      const ip = await getIPAddress();
-
-      const payload = {
-        event: eventType,
-        visitorData: { ...visitorData, ip },
-        formData: formData ? hashFormData(formData) : null
-      };
-
-      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      }).then(response => response.json())
-        .then(result => console.log('Tracking sent successfully'))
-        .catch(error => console.error('Error sending tracking:', error));
     }
 
     function hashFormData(formData) {
       const hashed = {};
       for (let key in formData) {
-        hashed[key] = btoa(formData[key]); // Simple base64 hash (replace with SHA256 for production)
+        hashed[key] = btoa(formData[key]);
       }
       return hashed;
     }
-
-    sendTrackingData('page_view');
-
-    if (form) {
-      form.addEventListener('submit', async function(event) {
-        event.preventDefault();
-        const formDataObj = {};
-        const formData = new FormData(form);
-        formData.forEach((value, key) => { formDataObj[key] = value; });
-
-        await sendTrackingData('form_submission', formDataObj);
-        form.submit();
-      });
-    }
   });
 </script>
+
 
 
 
