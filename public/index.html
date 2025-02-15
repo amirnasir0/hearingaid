@@ -20,19 +20,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WZK6FX5C');</script>
 <!-- End Google Tag Manager -->
     
- <script>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form'); // Select your form
+    const form = document.querySelector('form');
 
     function getVisitorData() {
       const urlParams = new URLSearchParams(window.location.search);
+      const sessionId = getSessionId();
       return {
         gclid: urlParams.get('gclid') || null,
         fbclid: urlParams.get('fbclid') || null,
         userAgent: navigator.userAgent,
         referrer: document.referrer,
         pageURL: window.location.href,
-        browserId: localStorage.getItem('browserId') || generateBrowserId()
+        browserId: localStorage.getItem('browserId') || generateBrowserId(),
+        sessionId: sessionId,
+        utm_source: urlParams.get('utm_source') || null,
+        utm_medium: urlParams.get('utm_medium') || null,
+        utm_campaign: urlParams.get('utm_campaign') || null
       };
     }
 
@@ -40,6 +45,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const id = 'browser-' + Math.random().toString(36).substr(2, 18);
       localStorage.setItem('browserId', id);
       return id;
+    }
+
+    function getSessionId() {
+      let sessionId = sessionStorage.getItem('sessionId');
+      if (!sessionId) {
+        sessionId = 'session-' + Math.random().toString(36).substr(2, 18);
+        sessionStorage.setItem('sessionId', sessionId);
+      }
+      return sessionId;
     }
 
     async function getIPAddress() {
@@ -60,10 +74,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       const payload = {
         event: eventType,
         visitorData: { ...visitorData, ip },
-        formData: formData
+        formData: formData ? hashFormData(formData) : null
       };
 
-      fetch('https://your-server-endpoint.com/track', {
+      fetch('https://chat-xbot.webspecia.in/api/iwh/e935b7b32bd4d2fbff9d9614a4721702', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -72,10 +86,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .catch(error => console.error('Error sending tracking:', error));
     }
 
-    // Capture page view on load
+    function hashFormData(formData) {
+      const hashed = {};
+      for (let key in formData) {
+        hashed[key] = btoa(formData[key]); // Simple base64 hash (replace with SHA256 for production)
+      }
+      return hashed;
+    }
+
     sendTrackingData('page_view');
 
-    // Capture form submission
     if (form) {
       form.addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -89,6 +109,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   });
 </script>
+
 
 
 
