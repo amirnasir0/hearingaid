@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom"; // Ensures reactivity to URL changes
 import prompt from "../Assets/signia-prompt.jpg";
 import styletto from "../Assets/signia-styletto.jpg";
 import defaultimg from "../Assets/image3.jpg";
@@ -41,29 +42,33 @@ const defaultContent = {
 };
 
 const ModalMapping = () => {
-  // Extract search query from URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const searchKeyword = urlParams.get("utm_term")?.toLowerCase() || "";
+  const location = useLocation(); // Reactively get URL params
+  const [matchedModel, setMatchedModel] = useState(defaultContent);
 
-  // Match search query with models
-  let matchedModel = defaultContent;
-  for (const model in modelMappings) {
-    if (searchKeyword.includes(model)) {
-      matchedModel = modelMappings[model];
-      break;
+  useEffect(() => {
+    // Extract search query from URL
+    const urlParams = new URLSearchParams(location.search);
+    const searchKeyword = urlParams.get("utm_term")?.toLowerCase().trim() || "";
+
+    // Attempt to find a matching model
+    let foundModel = defaultContent;
+    for (const model in modelMappings) {
+      if (searchKeyword.includes(model.toLowerCase())) {
+        foundModel = modelMappings[model];
+        break;
+      }
     }
-  }
 
-  // Extract values from matched model
-  const { image, headline, bulletPoints } = matchedModel;
+    setMatchedModel(foundModel);
+  }, [location.search]); // Runs every time the URL changes
 
   return (
     <div>
-      <h1 className="text-2xl md:text-4xl font-bold mt-6">{headline}</h1>
-      <img src={image} alt="Hearing Aid Model" className="w-full rounded-lg shadow-lg" />
+      <h1 className="text-2xl md:text-4xl font-bold mt-6">{matchedModel.headline}</h1>
+      <img src={matchedModel.image} alt="Hearing Aid Model" className="w-full rounded-lg shadow-lg" />
 
       <ul className="mt-4 space-y-2 text-lg">
-        {bulletPoints.map((point, index) => (
+        {matchedModel.bulletPoints.map((point, index) => (
           <li key={index} className="flex items-center">
             <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
             {point}
