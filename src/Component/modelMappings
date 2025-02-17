@@ -3,7 +3,7 @@ import prompt from "../Assets/signia-prompt.jpg";
 import styletto from "../Assets/signia-styletto.jpg";
 import defaultimg from "../Assets/image3.jpg";
 
-// Define model mappings
+// Define model mappings with bullet points
 const modelMappings = {
   "signia prompt": {
     image: prompt,
@@ -46,7 +46,7 @@ const ModalMapping = () => {
   const searchKeyword = urlParams.get("utm_term")?.toLowerCase() || "";
 
   // Match search query with models
-  let matchedModel = null;
+  let matchedModel = defaultContent;
   for (const model in modelMappings) {
     if (searchKeyword.includes(model)) {
       matchedModel = modelMappings[model];
@@ -54,8 +54,8 @@ const ModalMapping = () => {
     }
   }
 
-  // Use matched model or default fallback
-  const { image, headline, bulletPoints } = matchedModel || defaultContent;
+  // Extract values from matched model
+  const { image, headline, bulletPoints } = matchedModel;
 
   return (
     <div>
