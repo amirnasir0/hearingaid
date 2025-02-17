@@ -1,0 +1,77 @@
+import React from "react";
+import prompt from "../Assets/signia-prompt.jpg";
+import styletto from "../Assets/signia-styletto.jpg";
+import defaultimg from "../Assets/image3.jpg";
+
+// Define model mappings
+const modelMappings = {
+  "signia prompt": {
+    image: prompt,
+    headline: "Signia Prompt 3X - Advanced Hearing Technology",
+    bulletPoints: [
+      "Crystal-clear sound quality",
+      "Advanced noise cancellation",
+      "Affordable and durable",
+      "User-friendly controls",
+    ],
+  },
+  "styletto signia": {
+    image: styletto,
+    headline: "Styletto Signia 3AX - Sleek and Powerful",
+    bulletPoints: [
+      "Ultra-slim modern design",
+      "Bluetooth & AI-powered sound",
+      "Rechargeable with fast charging",
+      "Perfect for active lifestyles",
+    ],
+  },
+};
+
+// Default fallback
+const defaultContent = {
+  image: defaultimg,
+  headline: "Best Hearing Aids in India – Compare Prices & Buy Signia Hearing Aids",
+  bulletPoints: [
+    "Nearly invisible design",
+    "Bluetooth connectivity",
+    "Rechargeable Machine",
+    "0% EMI Options",
+    "Special offers for Senior Citizens",
+  ],
+};
+
+const ModalMapping = () => {
+  // Extract search query from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchKeyword = urlParams.get("utm_term")?.toLowerCase() || "";
+
+  // Match search query with models
+  let matchedModel = null;
+  for (const model in modelMappings) {
+    if (searchKeyword.includes(model)) {
+      matchedModel = modelMappings[model];
+      break;
+    }
+  }
+
+  // Use matched model or default fallback
+  const { image, headline, bulletPoints } = matchedModel || defaultContent;
+
+  return (
+    <div>
+      <h1 className="text-2xl md:text-4xl font-bold mt-6">{headline}</h1>
+      <img src={image} alt="Hearing Aid Model" className="w-full rounded-lg shadow-lg" />
+
+      <ul className="mt-4 space-y-2 text-lg">
+        {bulletPoints.map((point, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-blue-600 font-bold text-lg mr-2">✔</span>
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ModalMapping;
