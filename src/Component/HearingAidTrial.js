@@ -132,7 +132,7 @@
 import React from "react";
 import DetailsForm from "../Component/TopForm/detailsForm.js";
 import SpecialCTA from "../Component/SpecialCTA.js";
-import ModalMapping from "../Component/ModalMapping.js";
+import ModelMapping from "../Component/modelMapping.js";
 
 const HearingAidTrial = () => {
   return (
@@ -140,7 +140,7 @@ const HearingAidTrial = () => {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Left Section */}
         <div className="flex-1 w-full md:w-auto">
-          <ModalMapping /> {/* Using the new component */}
+          <ModelMapping /> {/* Using the new component */}
 
           {/* Special CTA */}
           <div className="mt-6">
