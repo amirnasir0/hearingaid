@@ -18,7 +18,7 @@ const modelMappings = {
         "User-friendly controls",
         "Durable and affordable",
         "Comfortable fit for daily use",
-        "16 Channels",
+        "8 Channels",
       ],
     },
   
@@ -30,7 +30,7 @@ const modelMappings = {
         "Clear and natural sound",
         "Lightweight and ergonomic",
         "Easy-to-use volume adjustments",
-        "16 Channels",
+        "8 Channels",
       ],
     },
   
@@ -42,7 +42,7 @@ const modelMappings = {
         "Enhanced speech clarity",
         "Durable and long-lasting battery",
         "Comfortable all-day wear",
-        "16 Channels",
+        "8 Channels",
       ],
     },
   //Intuis Series=================
