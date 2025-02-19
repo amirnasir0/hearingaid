@@ -3,7 +3,7 @@ import React from "react";
 const ThankYouPage = ({ name = "Guest" }) => {
   return (
     // <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg max-w-lg w-full text-center">
+      <div className="bg-white p-6 md:p-8 rounded-lg max-w-lg w-full text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-700">
           🎉 Congratulations, {name}! <br />
           You’ve Unlocked an Exclusive Discount!
