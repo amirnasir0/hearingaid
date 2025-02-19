@@ -9,8 +9,8 @@ const ThankYouPage = ({ name = "Guest" }) => {
           You’ve Unlocked an Exclusive Discount!
         </h2>
         <p className="text-gray-500 mt-4 text-sm md:text-base">
-          Your special offer is now active! But hurry—this extra discount is valid only for the next <strong>10 minutes</strong>! ⏳📞
-          Call now to claim your offer before it expires!
+          Your special offer is now active! But hurry—this extra discount is valid only for the next <strong>10 minutes</strong>! ⏳
+        📞 Call now to claim your offer before it expires!
         </p>
 
         {/* Buttons */}
