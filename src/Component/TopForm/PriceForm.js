@@ -72,7 +72,7 @@ const PriceForm = () => {
   };
 
   if (thankYouVisible) {
-    return <ThankYouPage />;
+    return <ThankYouPage name={name}/>;
   }
 
   return (
