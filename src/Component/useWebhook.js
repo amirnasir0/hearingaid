@@ -1,7 +1,7 @@
 // Webhook.js
 import { useCallback } from "react";
 
-const WEBHOOK_URL = "https://hkdk.events/gpxuv3t1p1c23x";
+const WEBHOOK_URL = "https://chat-xbot.webspecia.in/api/iwh/ecf71fd692f9ede5e7593a573a864830";
 
 const useWebhook = () => {
   const sendToWebhook = useCallback(async (eventData) => {
